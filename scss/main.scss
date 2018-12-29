@@ -1,5 +1,127 @@
-$primary-color: #2a3444;
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Quicksand|Major+Mono+Display|Montserrat');
 
+$bg-color: #fff;
+$primary-color: #2a3444;
+$secondary-color: 	#fadb44;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $bg-color;
+  height: 100%;
+  margin: 0;
+  line-height: 1.5;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+
+.float-shape{
+  animation: float 3s ease-in-out 1.5s infinite;
+  z-index: -2;
+  position: relative;
+  .line-shape{
+    background-image: url("/dist/img/Line.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 300px;
+    width: 300px; 
+    top : 50vh;
+    left: 75vw;
+
+    animation: load 1.5s;
+  }
+
+  .circle-shape{
+    background-image: url("/dist/img/Ellipse.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 70vh;
+    left: 40vw;
+
+    animation: load 1.25s;
+  }
+
+  .triangle-shape {
+    background-image: url("/dist/img/Polygon.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 20vh;
+    left: 20vw;
+    
+    animation: load 1.9s;
+  }
+}
+
+// h1,
+// h2 {
+//   margin: 0;
+// }
+h1,  
+h2 {
+  margin-bottom: 0;
+
+  &.lg-heading {
+    font-size: 5rem;
+    font-weight: 1000;
+    color: $primary-color;
+    animation: load 1s;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    width: 45%;
+    font-size: 1.5rem;
+    padding: 0.2rem 0;
+    animation: load 1.5s;
+    color: #d4d2d4;
+    border-top: 2px solid $primary-color;
+
+    &:hover {
+      font-size: 1.8rem;
+      transition: all 0.3s ease-in-out;
+    }
+ }
+}
+
+
+main {
+  padding: 4rem;
+  height: 100vh;
+
+  .icons {
+    margin-top: 1rem;
+    animation: load 1.9s;
+
+    a {
+      padding: 0.4rem;
+
+      &:hover {
+        color: $secondary-color;
+        transition: all 0.5s ease-out;
+    }
+   }
+ }
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+}
+
+
+//keyframe animasi
 @keyframes float {
   0% {
     transform: translateY(0px);
@@ -19,48 +141,4 @@ $primary-color: #2a3444;
   100% {
     transform: translateY(0vh);
   }
-}
-
-body {
-  background: $primary-color;
-
-  animation: load 1.25s;
-}
-
-
-.float-shape{
-  animation: float 4s ease-in-out infinite;
-  z-index: -2;
-  .line-shape{
-    background-image: url("/dist/img/Line.png");
-    background-repeat: no-repeat;
-    position: absolute;
-    height: 300px;
-    width: 300px; 
-    top : 45vh;
-    left: 70vw;
-  }
-
-  .triangle-shape {
-    background-image: url("/dist/img/Polygon.png");
-    background-repeat: no-repeat;
-    position: absolute;
-    height: 300px;
-    width: 300px;
-    top: 20vh;
-    left: 20vw;
-    
-  }
-}
-
-#home {
- position: relative;
-}
-
-h1 {
-  color: #fefcfe;
-}
-
-.text-secondary {
-  color: #fadb44;
 }
