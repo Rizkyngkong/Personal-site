@@ -1,4 +1,75 @@
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One|Quicksand|Major+Mono+Display|Montserrat");
+@keyframes float {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(-30px); }
+  100% {
+    transform: translateY(0px); } }
+
+@keyframes load {
+  0% {
+    transform: translateY(100vh); }
+  100% {
+    transform: translateY(0vh); } }
+
+@keyframes spin {
+  100% {
+    transform: rotate(180deg); } }
+
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35pX;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: black;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
+
+.float-shape {
+  z-index: -2;
+  position: relative; }
+  .float-shape .line-shape {
+    background-image: url("/dist/img/Line.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 40vh;
+    left: 75vw;
+    animation: float 3.5s ease-in-out 1.5s infinite, load 1.5s; }
+  .float-shape .circle-shape {
+    background-image: url("/dist/img/Ellipse.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 70vh;
+    left: 40vw;
+    animation: float 3.75s ease-in-out 1.5s infinite, load 1.75s; }
+  .float-shape .triangle-shape {
+    background-image: url("/dist/img/Polygon.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 20vh;
+    left: 20vw;
+    animation: float 3.5s ease-in-out 1.5s infinite, load 1.9s; }
+
 * {
   box-sizing: border-box; }
 
@@ -10,63 +81,30 @@ body {
   font-family: 'Montserrat', Helvetica, sans-serif;
   overflow: hidden; }
 
-.float-shape {
-  animation: float 3s ease-in-out 1.5s infinite;
-  z-index: -2;
-  position: relative; }
-  .float-shape .line-shape {
-    background-image: url("/dist/img/Line.png");
-    background-repeat: no-repeat;
-    position: absolute;
-    height: 300px;
-    width: 300px;
-    top: 50vh;
-    left: 75vw;
-    animation: load 1.5s; }
-  .float-shape .circle-shape {
-    background-image: url("/dist/img/Ellipse.png");
-    background-repeat: no-repeat;
-    position: absolute;
-    height: 300px;
-    width: 300px;
-    top: 70vh;
-    left: 40vw;
-    animation: load 1.25s; }
-  .float-shape .triangle-shape {
-    background-image: url("/dist/img/Polygon.png");
-    background-repeat: no-repeat;
-    position: absolute;
-    height: 300px;
-    width: 300px;
-    top: 20vh;
-    left: 20vw;
-    animation: load 1.9s; }
-
 h1,
 h2 {
   margin-bottom: 0; }
   h1.lg-heading,
   h2.lg-heading {
     font-size: 5rem;
+    font-weight: 1000;
     color: #2a3444;
     animation: load 1s; }
   h1.sm-heading,
   h2.sm-heading {
     margin-bottom: 2rem;
     width: 45%;
-    font-size: 1.5rem;
-    padding: 0.2rem 0;
+    font-size: 1.8rem;
+    padding: 1rem 0;
     animation: load 1.5s;
     color: #d4d2d4;
     border-top: 2px solid #2a3444; }
-    h1.sm-heading:hover,
-    h2.sm-heading:hover {
-      font-size: 1.8rem;
-      transition: all 0.3s ease-in-out; }
 
 main {
   padding: 4rem;
   height: 100vh; }
+  main#home {
+    padding-top: 20vh; }
   main .icons {
     margin-top: 1rem;
     animation: load 1.9s; }
@@ -82,18 +120,5 @@ a {
 
 header {
   position: fixed;
-  z-index: 2; }
-
-@keyframes float {
-  0% {
-    transform: translateY(0px); }
-  50% {
-    transform: translateY(-20px); }
-  100% {
-    transform: translateY(0px); } }
-
-@keyframes load {
-  0% {
-    transform: translateY(100vh); }
-  100% {
-    transform: translateY(0vh); } }
+  z-index: 2;
+  width: 100%; }
