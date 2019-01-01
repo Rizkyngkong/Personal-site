@@ -8,7 +8,7 @@
     position: absolute;
     height: 300px;
     width: 300px; 
-    top : 40vh;
+    top : 33vh;
     left: 75vw;
  
     animation: float 3s ease-in-out 1.5s infinite, load 1.5s;
@@ -23,7 +23,7 @@
     height: 300px;
     width: 300px;
     top: 70vh;
-    left: 40vw;
+    left: 50vw;
 
     animation: float 3s ease-in-out 1.75s infinite, load 1.75s;
     animation-timing-function: cubic-bezier(1, 0.17, 0.48, 0.96);
@@ -35,8 +35,8 @@
     position: absolute;
     height: 300px;
     width: 300px;
-    top: 20vh;
-    left: 20vw;
+    top: 15vh;
+    left: 12vw;
     
     animation: float 3s ease-in-out 1.9s infinite, load 1.9s;
     animation-timing-function: cubic-bezier(1, 0.17, 0.48, 0.96);

@@ -2,6 +2,7 @@
 @import '_config';
 @import '_menu';
 @import '_floatbg';
+@import '_mobile.scss';
 
 * {
   box-sizing: border-box;
@@ -40,6 +41,14 @@ h2 {
     animation-timing-function: cubic-bezier(1, 0.17, 0.48, 0.96);
     
  }
+
+  #lg-view {
+    display: inline-block;
+  }
+
+  #sm-view {
+    display: none;
+  }
 }
 
 
