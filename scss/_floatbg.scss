@@ -1,4 +1,4 @@
-.float-shape{
+  .float-shape{
   z-index: -2;
   position: relative;
 
@@ -11,7 +11,9 @@
     top : 40vh;
     left: 75vw;
  
-    animation: float 3.5s ease-in-out 1.5s infinite, load 1.5s;
+    animation: float 3s ease-in-out 1.5s infinite, load 1.5s;
+    animation-timing-function: cubic-bezier(1, 0.17, 0.48, 0.96);
+    
   }
 
   .circle-shape{
@@ -23,7 +25,8 @@
     top: 70vh;
     left: 40vw;
 
-    animation: float 3.75s ease-in-out 1.5s infinite, load 1.75s;
+    animation: float 3s ease-in-out 1.75s infinite, load 1.75s;
+    animation-timing-function: cubic-bezier(1, 0.17, 0.48, 0.96);
   }
 
   .triangle-shape {
@@ -35,6 +38,7 @@
     top: 20vh;
     left: 20vw;
     
-    animation: float 3.5s ease-in-out 1.5s infinite, load 1.9s;
+    animation: float 3s ease-in-out 1.9s infinite, load 1.9s;
+    animation-timing-function: cubic-bezier(1, 0.17, 0.48, 0.96);
   }
 }
