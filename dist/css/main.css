@@ -243,21 +243,29 @@ main {
         transition: all 0.5s ease-out; }
 
 main#about,
-main#project {
+main#project,
+main#contact {
   margin: 0;
   overflow: visible; }
   main#about h1,
-  main#project h1 {
+  main#project h1,
+  main#contact h1 {
     font-size: 2rem;
     color: #fadb44;
     margin-bottom: 0;
     margin-top: 5vh; }
   main#about p,
-  main#project p {
+  main#project p,
+  main#contact p {
     font-size: 1.2rem;
     color: #2a3444;
     line-height: 2;
     padding-top: 0; }
+  main#about .boxes,
+  main#project .boxes,
+  main#contact .boxes {
+    animation: load 1.9s;
+    animation-timing-function: cubic-bezier(1, 0.17, 0.48, 0.96); }
 
 .projects {
   display: grid;
@@ -275,14 +283,35 @@ main#project {
       border-color: #fadb44;
       transition: all 0.2s ease-out; }
 
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 1.5rem;
+    background: #FF7373;
+    border-radius: 10px;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    color: #d4d2d4;
+    transition: all 0.5s ease-out; }
+    .boxes div .text-secondary {
+      color: #2a3444; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem; }
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
-  margin-bottom: 0.3rem; }
+  margin-bottom: 0.3rem;
+  border-radius: 10px 15px; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
     background: #fadb44;
     color: #2a3444;
+    border-radius: 5px;
     transition: all 0.2s ease-out; }
 
 .btn-dark {
