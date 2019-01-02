@@ -1,3 +1,3 @@
 # Personal-site
 
-🚧  Under Construction  🚧
+https://rizkyngkong.github.io/personal-site/
