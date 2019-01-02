@@ -1,15 +1,16 @@
   .float-shape{
   z-index: -2;
   position: relative;
+  display: block;
 
   .line-shape{
     background-image: url("/dist/img/Line.png");
     background-repeat: no-repeat;
     position: absolute;
-    height: 300px;
-    width: 300px; 
-    top : 33vh;
-    left: 75vw;
+    height: 250px;
+    width: 250px; 
+    top : 7vh;
+    left: 60vw;
  
     animation: float 3s ease-in-out 1.5s infinite, load 1.5s;
     animation-timing-function: cubic-bezier(1, 0.17, 0.48, 0.96);
@@ -20,9 +21,9 @@
     background-image: url("/dist/img/Ellipse.png");
     background-repeat: no-repeat;
     position: absolute;
-    height: 300px;
-    width: 300px;
-    top: 70vh;
+    height: 250px;
+    width: 250px;
+    top: 55vh;
     left: 50vw;
 
     animation: float 3s ease-in-out 1.75s infinite, load 1.75s;
@@ -33,10 +34,10 @@
     background-image: url("/dist/img/Polygon.png");
     background-repeat: no-repeat;
     position: absolute;
-    height: 300px;
-    width: 300px;
-    top: 15vh;
-    left: 12vw;
+    height: 250px;
+    width: 250px;
+    top: -2vh;
+    left: 8vw;
     
     animation: float 3s ease-in-out 1.9s infinite, load 1.9s;
     animation-timing-function: cubic-bezier(1, 0.17, 0.48, 0.96);
